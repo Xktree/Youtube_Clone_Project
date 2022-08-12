@@ -14,6 +14,7 @@ def all_comments(request, video_id):
     serializer = CommentSerializer(comment, many=True)
     return Response(serializer.data)
 
+
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
 def user_by_comment(request):
@@ -34,6 +35,7 @@ def comment_by_id(request, comment_id):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data, status.HTTP_201_CREATED)
+
 
 
 

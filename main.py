@@ -2,10 +2,12 @@
 
 # (5 points) As a developer, I want to setup the Django + React starter code and connect the backend (Django API) to my MySQL database, closely following the setup guide for instructions. (DONE)
 
+# (5 points) As a developer, I want to create a Comment model:
+
 # (5 points) As a developer, I want to create a Comment model: (DONE)
 
-# Property names must be in snake_case and match the following exactly!
 
+# Property names must be in snake_case and match the following exactly!
 # user – ForeignKey
 # video_id – CharField
 # text – CharField
@@ -21,9 +23,14 @@
 # (7.5 points) As a developer, I want to create a GET endpoint that does the following things: (DONE)
 # · Accepts a value from the request’s URL (The YouTube video id I am trying to get comments for).
 # · Returns a 200 status code.
+# · Responds with all comments from the database that are related to the video id sent in the URL.
+
+# (5 points) As a developer, I want to create a POST endpoint that does the following things:
+
 # · Responds with all comments from the database that are related to the video id sent in the URL. 
 
 # (5 points) As a developer, I want to create a POST endpoint that does the following things: (DONE)
+
 # · Requires JWT authorization (Protected route).
 # · Accepts a body object from the request in the form of a Comment model.
 # · Adds the new comment to the database associated with the user who sent the JWT in the request.

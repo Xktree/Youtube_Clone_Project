@@ -20,9 +20,9 @@
 
 # (7.5 points) As a developer, I want to create a GET endpoint that does the following things: (DONE)
 # · Accepts a value from the request’s URL (The YouTube video id I am trying to get comments for).
-
 # · Returns a 200 status code.
 # · Responds with all comments from the database that are related to the video id sent in the URL. 
+
 # (5 points) As a developer, I want to create a POST endpoint that does the following things: (DONE)
 # · Requires JWT authorization (Protected route).
 # · Accepts a body object from the request in the form of a Comment model.
@@ -45,7 +45,6 @@
 # · Responds with all replies from the database that are related to the comment id sent in the URL.
 
 # (5 points) As a developer, I want to create a POST endpoint that does the following things: (DONE)
-
 # · Requires JWT authorization (Protected route).
 # · Accepts a value from the request’s URL (The id of the comment the reply will be connected to).
 # · Accepts a body object from the request in the form of a Reply model.

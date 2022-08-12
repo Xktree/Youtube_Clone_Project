@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework .decorators import api_view
 from rest_framework .response import Response
-from .models import User
+from .models import Reply
 from .serializers import ReplySerializer
 from rest_framework import status
 
@@ -10,10 +10,10 @@ from rest_framework import status
 @api_view(['GET', 'POST'])
 def user_replies(request):
 
-    user = User.objects.all()
+    reply = Reply.objects.all()
 
     if request.method == 'GET':
-        serializer = ReplySerializer(user, many=True)
+        serializer = ReplySerializer(reply, many=True)
         return Response(serializer.data, status.HTTP_200_OK)
     elif request.method == 'POST':
         serializer = ReplySerializer(data=request.data)

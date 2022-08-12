@@ -11,6 +11,7 @@ from rest_framework import status
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
 def comment_by_id(request, comment_id):
+    comment = Comment.objects.get(pk = comment_id)
     if request.method == 'POST':
         print(
             'Comment ', request.comment.id)
@@ -19,7 +20,7 @@ def comment_by_id(request, comment_id):
         serializer.save()
         return Response(serializer.data, status.HTTP_201_CREATED)
     elif request.method == 'GET':
-        reply = Reply.objects.filter(comment_id = request.comment.id)
+        reply = Reply.objects.filter(comment = request.comment.id)
         serializer = ReplySerializer(reply, many=True)
         return Response(serializer.data, status.HTTP_200_OK)
     

@@ -4,5 +4,5 @@ from . import views
 # <<<<<<<<<<<<<<<<< EXAMPLE FOR STARTER CODE USE <<<<<<<<<<<<<<<<<
 
 urlpatterns = [
-    path('', views.comment_by_id),
+    path('', views.replies_to_comment),
 ]

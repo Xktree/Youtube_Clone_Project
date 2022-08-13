@@ -16,8 +16,8 @@ def replies_to_comment(request, comment_id):
         return Response(serializer.data, status.HTTP_200_OK)
     elif request.method == 'POST':
         serializer = ReplySerializer(data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save(user=request.user)
+        if serializer.is_valid():
+            serializer.save(user=request.user, comment_id=comment_id)
             return Response(serializer.data, status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

@@ -17,7 +17,7 @@ def all_comments(request, video_id):
 
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
-def user_by_comment(request):
+def new_comment(request):
     print(
         'User ', f"{request.user.id} {request.user.email} {request.user.username}")
     if request.method == 'POST':
@@ -29,7 +29,7 @@ def user_by_comment(request):
 
 @api_view(['GET', 'PUT'])
 @permission_classes([IsAuthenticated])
-def comment_by_id(request, comment_id):
+def update_comment(request, comment_id):
     comment = Comment.objects.get(pk = comment_id)
     if request.method == 'PUT':
         serializer = CommentSerializer(comment, data=request.data)

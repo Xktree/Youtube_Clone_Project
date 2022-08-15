@@ -1,4 +1,4 @@
-# (5 points): As a developer, I want to make good, consistent commits (at least 25 for the entire team for both the backend and frontend).
+# (5 points): As a developer, I want to make good, consistent commits (at least 25 for the entire team for both the backend and frontend). (DONE)
 
 # (5 points) As a developer, I want to setup the Django + React starter code and connect the backend (Django API) to my MySQL database, closely following the setup guide for instructions. (DONE)
 

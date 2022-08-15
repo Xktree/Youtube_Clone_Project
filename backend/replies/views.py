@@ -7,17 +7,21 @@ from rest_framework import status
 
 # Create your views here.
 
-@api_view(['GET', 'POST'])
+@api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def replies_to_comment(request, comment_id):
     if request.method == 'GET':
         reply = Reply.objects.filter(comment_id = comment_id)
         serializer = ReplySerializer(reply, many=True)
         return Response(serializer.data, status.HTTP_200_OK)
-    elif request.method == 'POST':
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def new_reply(request):
+    if request.method == 'POST':
         serializer = ReplySerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save(user=request.user, comment_id=comment_id)
+            serializer.save(user=request.user)
             return Response(serializer.data, status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

@@ -1,11 +1,28 @@
 import React, { useState } from 'react';
+import {  Navigate, useNavigate } from "react-router-dom";
 
-const SearchBar = () => {
+
+const SearchBar = (props) => {
 
     const [searchValue, setSearchValue] = useState ("")
+    const navigate = useNavigate();
+
+    function handleSubmit (event) {
+        event.preventDefault();
+        let newSearchValue = searchValue
+        console.log(newSearchValue)
+        props.searchValue(newSearchValue)
+        navigate('/results')
+        setSearchValue('')
+    }
 
     return ( 
-       <form></form>
+        <div className='searchbar-container'>
+            <form className='submission-container' onSubmit={handleSubmit}>
+                <div><input type='text' placeholder='Search Here' value={searchValue} onChange={(event) => setSearchValue(event.target.value)}/></div>
+                <button type='Submit'>Search</button>    
+            </form>
+        </div>    
      );
 }
  

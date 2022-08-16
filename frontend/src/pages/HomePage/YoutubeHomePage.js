@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
+import SearchPage from "../SearchPage/SearchPage";
 
 const YoutubeHomePage = () => {
   const [user, token] = useAuth();

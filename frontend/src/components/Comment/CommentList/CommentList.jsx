@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Comment from '../Comment';
-// import CommentForm 
+import CommentForm from '../../CommentForm/CommentForm';
 
 const CommentList = (props) => {
 
@@ -13,7 +13,7 @@ const CommentList = (props) => {
         return (  
             <div className="comment">
             <div className='comment'>
-                {/* <CommentForm></CommentForm> */}
+                <CommentForm videoId={props.videoId} getVideoComments={props.getVideoComments}></CommentForm>
             </div>
             <h5 className='section-header'>All Comments</h5>
             {props.comments &&

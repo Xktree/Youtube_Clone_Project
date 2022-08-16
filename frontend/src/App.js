@@ -3,9 +3,10 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 // Pages Imports
-import HomePage from "./pages/HomePage/HomePage";
+import YoutubeHomePage from "./pages/HomePage/YoutubeHomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import Search
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
@@ -23,7 +24,7 @@ function App() {
           path="/"
           element={
             <PrivateRoute>
-              <HomePage />
+              <YoutubeHomePage />
             </PrivateRoute>
           }
         />

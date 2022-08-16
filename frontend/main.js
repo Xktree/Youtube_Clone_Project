@@ -6,7 +6,7 @@
 
 // (5 points): As a developer, I want to make good, consistent commits (at least 25 for the entire team for both the backend and frontend). (DONE)
 
-// (5 points): As a web designer, I want to create a wireframe for my application
+// (5 points): As a web designer, I want to create a wireframe for my application (DONE)
 
 // (5 points) As a developer, I want to use React.js best practices, which consists of creating function components and properly passing state around as props.
 

@@ -6,7 +6,7 @@ import "./App.css";
 import YoutubeHomePage from "./pages/HomePage/YoutubeHomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
-import Search
+// import Search
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";

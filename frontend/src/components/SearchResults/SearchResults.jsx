@@ -9,7 +9,7 @@ const SearchPage = (props) => {
     const fetchVideos = async () => {
       try {
         let response = await axios.get(
-          "https://www.googleapis.com/youtube/v3/search?q=songs vintage&key=AIzaSyDP-VykMCpCjPn_1urJfupj4ZH6BVQTgpc",
+          "https://www.googleapis.com/youtube/v3/search?q=songs vintage&key=AIzaSyCeEU7lGtu4ZcNC1HaJUp4P3LLjDsopaXw&part=snippet",
           {
             // headers: {
             //   Authorization: "Bearer " + token,
@@ -19,22 +19,19 @@ const SearchPage = (props) => {
         console.log(response.data);
         setVideos(response.data);
       } catch (error) {
-        console.log(error.response.data);
+        console.log("hello");
       }
     };
     fetchVideos();
   }, []);
 
   return (
-    <div>
-      <iframe
-        id="ytplayer"
-        type="text/html"
-        width="320"
-        height="180"
-        src="https://www.youtube.com/embed/pPG0o8zZDnY?autoplay=1&origin=http://example.com"
-        frameborder="0"
-      ></iframe>
+    <div> {videos.map((video) => {
+      return (
+        <div> <img src={video.items.snippet.thumbnails.default.url}/></div>
+      )
+    })}
+      
     </div>
   );
 };

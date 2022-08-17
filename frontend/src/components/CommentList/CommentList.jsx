@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Comment from '../Comment';
-import CommentForm from '../../CommentForm/CommentForm';
+import Comment from '../Comment/Comment';
+import CommentForm from '../CommentForm/CommentForm';
 
 const CommentList = (props) => {
 

@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from 'axios';
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import useCustomForm from "../../hooks/useCustomForm";
 
 const CommentForm = (props) => {
@@ -14,7 +14,7 @@ const CommentForm = (props) => {
       );
     
 let initialValues = {
-    user: "2",
+    user: "",
     video_id: "",
     text: "",
     likes: "0",

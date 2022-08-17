@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 // Pages Imports
-import YoutubeHomePage from "./pages/HomePage/YoutubeHomePage";
+import YoutubeHomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 
@@ -19,6 +19,7 @@ function App() {
   return (
     <div>
       <Navbar />
+      <img src="https://i.ytimg.com/vi/Fa_rNR__UV0/default.jpg"></img>
       <Routes>
         <Route
           path="/"

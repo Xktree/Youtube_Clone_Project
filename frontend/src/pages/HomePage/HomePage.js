@@ -13,7 +13,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        let response = await axios.get("http://127.0.0.1:8000/api/login/", {
+        let response = await axios.get("http://127.0.0.1:8000/api/", {
           headers: {
             Authorization: "Bearer " + token,
           },

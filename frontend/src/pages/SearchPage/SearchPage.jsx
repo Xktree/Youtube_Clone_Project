@@ -10,7 +10,7 @@ const SearchPage = (props) => {
     props.submitVideoInformation(newVideoId)
   }
 
-  console.log('search page vids', props.videos)
+  console.log('Search Results', props.videos)
   return(
       <div className='container'>
               <div className='row'>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const VideoPlayer = (props) => {
   const [video, setVideo] = useState([]);
@@ -30,8 +30,10 @@ const VideoPlayer = (props) => {
         frameBorder="0"
       ></iframe>
       <div>
+        <Link to = '/video-page'>
         <p>{video.snippet.title}</p>
         <p>{video.snippet.description}</p>
+        </Link>
       </div>
     </div>
   );

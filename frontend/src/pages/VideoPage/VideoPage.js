@@ -1,21 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import useAuth from "../../hooks/useAuth";
-import axios from "axios";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
-// import "../../components/VideoPlayer/VideoPlayer.css";
-import CommentList from "../../components/CommentList/CommentList";
+import Comment from "../../components/Comment/Comment"
 import RelatedVideos from "../../components/RelatedVideos/RelatedVideos";
-import { useParams } from "react-router-dom";
+
 
 const VideoPage = (props) => {
   const [user, token] = useAuth();
-  const { videoId } = useParams;
 
   return (
     <div>
       <div>
         <VideoPlayer />
         <RelatedVideos />
+        <Comment User={user.username}/>
       </div>
     </div>
   );

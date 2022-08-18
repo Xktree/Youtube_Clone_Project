@@ -26,6 +26,7 @@ function App() {
           element={
             <PrivateRoute>
               <YoutubeHomePage />
+              <VideoPage/>
             </PrivateRoute>
           }
         />

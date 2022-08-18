@@ -16,7 +16,6 @@ const SearchPage = (props) => {
               <div className='row'>
                   {props.videos.map((video) => (                        
                           <div key={video.id.videoId} onClick={()=>{handleSubmit(video.id.videoId)}}>
-                              <VideoCard video={video} />
                           </div>                      
                   ))}
               </div>

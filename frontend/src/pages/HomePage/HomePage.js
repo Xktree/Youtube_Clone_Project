@@ -5,18 +5,19 @@ import axios from "axios";
 import SearchResults from "../../components/SearchResults/SearchResults";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import "./HomePage.css";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useParams } from "react-router-dom";
 
 const HomePage = () => {
   const [user, token] = useAuth();
   const navigate = useNavigate();
   const [videos, setVideos] = useState([]);
+  const [ videoId ] = useParams();
 
   useEffect(() => {
     const fetchVideo = async () => {
       try {
         let response = await axios.get(
-          "https://www.googleapis.com/youtube/v3/search?relatedToVideoId=EN02_J3MnAM&type=video&key=AIzaSyDP-VykMCpCjPn_1urJfupj4ZH6BVQTgpc&part=snippet"
+          `https://www.googleapis.com/youtube/v3/search?q=pasta&key=AIzaSyDP-VykMCpCjPn_1urJfupj4ZH6BVQTgpc&part=snippet`
         );
 
         setVideos(response.data.items);
@@ -39,7 +40,7 @@ const HomePage = () => {
         videos.map((video) => {
           return (
             <div>
-              <Link to="/video-page">
+              <Link to={`/video=${videoId}`}>
                 {video.snippet && (
                   <img
                     type="image"
@@ -57,4 +58,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
-/* <VideoDetails video={video} />; */
+

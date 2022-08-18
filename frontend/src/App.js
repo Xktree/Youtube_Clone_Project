@@ -20,7 +20,6 @@ function App() {
   return (
     <div>
       <Navbar />
-      <img src="https://i.ytimg.com/vi/Fa_rNR__UV0/default.jpg"></img>
       <Routes>
         <Route
           path="/"

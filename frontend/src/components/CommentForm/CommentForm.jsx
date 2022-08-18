@@ -40,7 +40,7 @@ return (
             <input 
                 type="text"
                 name="comment-text"
-                value={formData.comment-text}
+                value={formData.text}
                 onChange={handleInputChange}
             />
             <button type="submit" className="text-submission">Make Post</button>

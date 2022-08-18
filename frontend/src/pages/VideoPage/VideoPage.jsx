@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
-import CommentForm from "../../components/CommentForm/CommentForm";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 // import "../../components/VideoPlayer/VideoPlayer.css";
 import CommentList from "../../components/CommentList/CommentList";

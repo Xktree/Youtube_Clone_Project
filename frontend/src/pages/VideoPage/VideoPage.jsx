@@ -8,17 +8,17 @@ import RelatedVideos from "../../components/RelatedVideos/RelatedVideos";
 import { useParams } from "react-router-dom";
 
 const VideoPage = (props) => {
-  const [user,token] = useAuth(); 
-  
+  const [user, token] = useAuth();
+  const { videoId } = useParams;
+
   return (
     <div>
-        <div>
-            <VideoPlayer/>
-            <RelatedVideos/>
-        </div>
+      <div>
+        <VideoPlayer />
+        <RelatedVideos />
+      </div>
     </div>
-  )
-
-  }
+  );
+};
 
 export default VideoPage;

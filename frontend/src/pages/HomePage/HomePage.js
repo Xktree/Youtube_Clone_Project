@@ -30,7 +30,6 @@ const HomePage = () => {
   function handleSubmit(event) {
     event.preventDefault();
     navigate("/video-page");
-
   }
   return (
     <div className="container">
@@ -38,16 +37,21 @@ const HomePage = () => {
       {console.log(videos.items)}
       {videos &&
         videos.map((video) => {
-         
-          return (<div>
-           {video.snippet && <img
-              type="image"
-              onClick={handleSubmit}
-     
-              src={video.snippet.thumbnails.default.url}
-            />}
-          </div>);
+          return (
+            <div>
+              <Link to="/video-page">
+                {video.snippet && (
+                  <img
+                    type="image"
+                    onClick={handleSubmit}
+                    src={video.snippet.thumbnails.default.url}
+                  />
+                )}
+              </Link>
+            </div>
+          );
         })}
+      <div></div>
     </div>
   );
 };

@@ -25,15 +25,7 @@ const SearchPage = (props) => {
     fetchVideos();
   }, []);
 
-  return (
-    <div> {videos.map((video) => {
-      return (
-        <div> <img src={video.items.snippet.thumbnails.default.url}/></div>
-      )
-    })}
-      
-    </div>
-  );
+  return <div>Hello World</div>;
 };
 
 export default SearchPage;

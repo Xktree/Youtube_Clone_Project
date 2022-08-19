@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 
 const VideoPlayer = (props) => {
   const [video, setVideo] = useState([]);
+  const { videoId } = useParams();
 
   useEffect(() => {
     console.log(videoId);
